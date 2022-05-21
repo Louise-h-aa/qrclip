@@ -17,10 +17,10 @@ def print_qr_code(text):
 
     # To terminal
     qr.print_tty()
-    
+
 
 # Function for generating the paste output 
-def main ():
+def main():
     clipboard_content = pyperclip.paste()
     print_qr_code(clipboard_content)   
     
