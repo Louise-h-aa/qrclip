@@ -2,24 +2,24 @@
 import qrcode
 import pyperclip
 
-#Function for printing qrcode to terminal
+# Function for printing qrcode to terminal
 def print_qr_code(text):
     qr = qrcode.QRCode(version=1,
                        error_correction=qrcode.ERROR_CORRECT_L,
                        box_size=10,
                        border=4)
    
-    #Add text to the qrode
+    # Add text to the qrode
     qr.add_data(text)
     
-    #Compile the qrcode
-    qr.make()
+    # Compile the qrcode
+    qr.make(fit=True)
 
-    #To terminal
+    # To terminal
     qr.print_tty()
     
 
-#Function for generating the paste output 
+# Function for generating the paste output 
 def main ():
     clipboard_content = pyperclip.paste()
     print_qr_code(clipboard_content)   
