@@ -12,7 +12,7 @@ $ git clone https://github.com/Louise-h-aa/qrclip.git
 $ cd qrclip
 
 # install the dependencies
-$ python3 -m pip install -r dependencies.txt
+$ python3 -m pip install -r requirements.txt
 ```
 
 ## Usage
