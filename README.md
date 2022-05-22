@@ -11,7 +11,7 @@ $ git clone https://github.com/Louise-h-aa/qrclip.git
 # change the working directory to qrclip
 $ cd qrclip
 
-# install the requirements
+# install the dependencies
 $ python3 -m pip install -r requirements.txt
 ```
 
