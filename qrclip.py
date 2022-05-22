@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
-from qrcode import QRCode, ERROR_CORRECT_L
-from pyperclip import paste
 
+## START imports region
+from qrcode import QRCode, ERROR_CORRECT_L    # QRCode is QR code generator class and ERROR_CORRECT_L is error level
+from pyperclip import paste                   # paste() is function to get current clipboard buffer
+## END imports region
+
+## START functions region
+# This function generates QR code from `text` argument passed and outputs it on terminal screen
 def print_qr_code(text: str) -> None:
     """
     Function for printing qrcode to terminal
@@ -18,20 +23,22 @@ def print_qr_code(text: str) -> None:
         box_size = 10,
         border = 4
     )
-    # Add text to the qrode
+    # Add text to the QR code
     qr.add_data(text)
-    # Compile the qrcode
+    # Compile the QR code
     qr.make(fit = True)
-    # To terminal
+    # Output to terminal
     qr.print_tty()
     
-
-# Function for generating the paste output 
+# Function for passing clipboard content to print_qr_code()
 def main() -> None:
     """Main function"""
 
-    print_qr_code(paste())   
+    clipboard_buffer: str = paste()
+    print_qr_code(clipboard_buffer)
+## END functions region
 
-if __name__ == "__main__":
+## START main region
+if __name__ == "__main__":    # if we are running script as "python qrclip.py" then it executes this code
     main()
-    
+## END main region
