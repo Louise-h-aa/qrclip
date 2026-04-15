@@ -2,6 +2,17 @@
   qrclip
 </h1>
 
+<div align="center">
+
+<strong>Language: </strong>
+<a href="./README.zh.md">🇨🇳 中文</a> |
+<a href="./README.ru.md">🇷🇺 Russian</a> |
+<span style="color: #F5F752; margin: 0 10px;">✅ 🇺🇸 English (current)</span>
+
+</div>
+
+---
+
 ## Installation 🚏
 
 ```console
@@ -27,6 +38,7 @@ python3 qrclip.py
 > For autonomy in `Linux`, create a service in folder `etc/systemd/system` named [qrclip.service](configs/qrclip.service)
 
 > service text:
+
 ```conf
 [Unit]
 Description=QR Clip Service
